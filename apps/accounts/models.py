@@ -31,7 +31,7 @@ class User(AbstractBaseUser, IsDeletedModel, PermissionsMixin):
     """
 
     first_name = models.CharField(verbose_name="First name", max_length=25, null=True)
-    last_name = models.PositiveIntegerField(verbose_name="Last name", max_length=25, null=True)
+    last_name = models.CharField(verbose_name="Last name", max_length=25, null=True)
     email = models.EmailField(verbose_name="Email address", unique=True)
     avatar = models.ImageField(upload_to="avatars/", null=True, default='avatars/default.jpg')
 
