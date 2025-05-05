@@ -142,9 +142,12 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "My First API", # название проекта
-    "VERSION": "0.0.1", # версия проекта
-    "SERVE_INCLUDE_SCHEMA": False, # исключить эндпоинт /schema
+    "TITLE": "My First API",  # название проекта
+    "VERSION": "0.0.1",  # версия проекта
+    "SERVE_INCLUDE_SCHEMA": False,  # исключить эндпоинт /schema
+    "SWAGGER_UI_SETTINGS": {
+        "persistAuthorization": True,  # не сбрасывать авторизацию
+    },
 }
 
 from datetime import timedelta
